@@ -29,11 +29,6 @@ namespace MakeupSelector
             var allmakeup = mainClass.getMakeupProduct();
             DaftarProductMakeup.Items.Clear();
             DaftarProductMakeup.ItemsSource = allmakeup;
-
-            Console.WriteLine(allmakeup);
-
         }
-
-
     }
 }

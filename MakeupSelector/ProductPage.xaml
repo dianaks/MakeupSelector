@@ -11,7 +11,7 @@
         <ListView Name="DaftarProductMakeup"  Height="214" VerticalAlignment="Top" Margin="10,76,-69,0" HorizontalAlignment="Left" Width="359">
             <ListView.ItemTemplate>
                 <DataTemplate>
-                    <TextBlock FontSize="12" Text="{Binding}" Grid.Column="0"/>
+                    <TextBlock FontSize="12" Text="{Binding name}" Grid.Column="0"/>
                 </DataTemplate>
             </ListView.ItemTemplate>
             <TextBlock TextWrapping="Wrap" Text="TextBlock"/>
