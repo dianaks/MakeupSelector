@@ -30,10 +30,15 @@ namespace MakeupSelector
 
 
 
-        internal void setPageToProductPage(String category)
+        internal void setPageToBrandPage(String category)
         {
-            MainFrame.Content = new BrandPage(category);
+            MainFrame.Content = new BrandPage(category, this);
             
+        }
+
+        internal void setPageToProductPage()
+        {
+            MainFrame.Content = new ProductPage();
         }
     }
 }

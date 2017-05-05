@@ -20,10 +20,13 @@ namespace MakeupSelector
     /// </summary>
     public partial class BrandPage : Page
     {
-        public BrandPage(String category)
+        MainWindow mainWindow;
+        public BrandPage(String category, MainWindow mainWindow)
         {
             InitializeComponent();
+            this.mainWindow = mainWindow;
             MainClass create = new MainClass();
+           
             List<MakeupProduct> products = create.getData(category);
             List<string> brands = new List<string>();
 
@@ -40,7 +43,8 @@ namespace MakeupSelector
         private void DaftarBrandMakeup_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
             MainClass create = new MainClass();
-            create.saveBrand((String) DaftarProdukMakeup.SelectedItem); 
+            create.saveBrand((String) DaftarBrandMakeup.SelectedItem);
+            mainWindow.setPageToProductPage();
         }
     }
 }

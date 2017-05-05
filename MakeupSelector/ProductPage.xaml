@@ -8,6 +8,16 @@
 	Title="ProductPage">
 
     <Grid>
-        
+        <ListView Name="DaftarProductMakeup"  Height="214" VerticalAlignment="Top" Margin="10,76,-69,0" HorizontalAlignment="Left" Width="359">
+            <ListView.ItemTemplate>
+                <DataTemplate>
+                    <TextBlock FontSize="12" Text="{Binding}" Grid.Column="0"/>
+                </DataTemplate>
+            </ListView.ItemTemplate>
+            <TextBlock TextWrapping="Wrap" Text="TextBlock"/>
+        </ListView>
+        <TextBlock HorizontalAlignment="Left" TextWrapping="Wrap" VerticalAlignment="Top" Height="20" Width="223" Margin="10,38,0,0">
+      <Run Text="Berikut daftar produk makeup dari brand "/><Run Text="yang anda pilih"/><Run Text="!"/></TextBlock>
+
     </Grid>
 </Page>

@@ -13,6 +13,8 @@ namespace MakeupSelector
     class MainClass
     {
         List<MakeupProduct> data = new List<MakeupProduct>();
+        SQLiteConnection db = new SQLiteConnection("makeupdb");
+
         public List<MakeupProduct> getData(String category)
         {
             String linkCategory = "http://makeup-api.herokuapp.com/api/v1/products.json?product_type=" + category;
@@ -38,9 +40,10 @@ namespace MakeupSelector
 
         public void saveBrand(String brand)
         {
-            SQLiteConnection db = new SQLiteConnection("makeupdb");
+            
             db.CreateTable<MakeupProduct>();
             db.DeleteAll<MakeupProduct>();
+            
 
             foreach (MakeupProduct makeupProduct in data)
             {
@@ -49,6 +52,11 @@ namespace MakeupSelector
                     db.Insert(makeupProduct);
                 }
             }
+        }
+
+        public List<MakeupProduct> getMakeupProduct(){
+            List<MakeupProduct> semuaMakeup = db.Table<MakeupProduct>().ToList();
+            return semuaMakeup;
         }
     }
 }

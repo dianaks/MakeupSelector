@@ -12,6 +12,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using SQLite;
 
 namespace MakeupSelector
 {
@@ -20,9 +21,19 @@ namespace MakeupSelector
     /// </summary>
     public partial class ProductPage : Page
     {
+        MainClass mainClass = new MainClass();
         public ProductPage()
         {
             InitializeComponent();
+
+            var allmakeup = mainClass.getMakeupProduct();
+            DaftarProductMakeup.Items.Clear();
+            DaftarProductMakeup.ItemsSource = allmakeup;
+
+            Console.WriteLine(allmakeup);
+
         }
+
+
     }
 }

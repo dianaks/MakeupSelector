@@ -32,26 +32,26 @@ namespace MakeupSelector
         private void RadioButton_Checked_1(object sender, RoutedEventArgs e)
         {
             this.category = "blush";
-            mainWindow.setPageToProductPage(this.category);
+            mainWindow.setPageToBrandPage(this.category);
         }
 
         private void RadioButton_Checked(object sender, RoutedEventArgs e)
         {
             this.category = "eyebrow";
-            mainWindow.setPageToProductPage(this.category);
+            mainWindow.setPageToBrandPage(this.category);
             
         }
 
         private void RadioButton_Checked_2(object sender, RoutedEventArgs e)
         {
             this.category = "foundation";
-            mainWindow.setPageToProductPage(this.category);
+            mainWindow.setPageToBrandPage(this.category);
         }
 
         private void RadioButton_Checked_3(object sender, RoutedEventArgs e)
         {
             this.category = "lipstick";
-            mainWindow.setPageToProductPage(this.category);
+            mainWindow.setPageToBrandPage(this.category);
         }
         
     }
